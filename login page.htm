@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <script>
+            function dis(){
+                // let name='Umamahesh'
+                var name1=document.getElementById("cls1").value;
+                // name.style.display="block";
+                document.getElementById("cls").innerHTML='WELCOME '+name1;            }
+        </script>
+        <style>
+        body{
+                background-color:#A78763;
+
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+        <p id="cls" name="mahesh">HELLO,MAY I KNOW YOUR NAME PLEASE :</p>
+        <input type="text" id="cls1" placeholder="Name"></input>
+        <button type="button" onclick="dis()">Submit</button>
+        <br><br><span>FOR Sign Up : </span>
+        <button type="button" id="siup" onclick="location.href='file:///C:/Users/home1/Desktop/html/signup.htm'">SIGNUP</button>
+        <br><br><span>FOR Sign In : </span>
+        <button type="button" id="siin" onclick="location.href='file:///C:/Users/home1/Desktop/html/login.htm'" target="_blank">SIGNIN</button>
+        </center>
+    </body>
+</html>
