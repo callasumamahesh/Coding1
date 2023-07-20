@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature_Convertion</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh_94t1C1ropzDVtYC8y6glFxR9eeCf_fRYN6_udbpZgZTd0HNBXEppb_NEYuHdms7OGY&usqp=CAU">
+    <style>
+        input[type="text"]{
+            padding:20px;
+            width:90px;
+            border:solid black;
+            border-radius: 10px;
+            background-color:#eead62;
+        }
+        .cont{
+            border:5px solid;
+            background-color: #8BB2D1;
+            text-align:center;
+            width:350px;
+            position: absolute;
+            top:25%;
+            left:40%;
+            transform:translate(0%,-0%)
+            
+        }
+        img{
+            float:right;
+            align-items:center;
+            top:25px;
+        }
+        body,html{
+            background-color: #68461E;
+        }
+    </style>
+    </head>
+    <body>
+        <img src="https://c8.alamy.com/comp/PDHRTB/cartoon-of-chilled-man-looking-at-big-fahrenheit-thermometer-showing-low-temperature-PDHRTB.jpg" alt="temp" width="25%" height="25%">
+        <div class="cont">
+            <p>Converting Temperature from </p>
+
+
+            <select id="value1" onchange="temp()">
+                <option>Temperatures</option>
+                <option value="Degree Centigrade">1.Degree Centigrade</option>
+                <option value="Faghreen Centigrade">2.Faghreen Centigrade</option>
+                <option value="Kelven">3.Kelven</option>
+            </select><br>
+            <p>to</p>
+            <select id="value2" onchange="temp()">
+                <option>Temperatures</option>
+
+                <option value="Degree Centigrade1" >1.Degree Centigrade</option>
+                <option value="Faghreen Centigrade1">2.Faghreen Centigrade</option>
+                <option value="Kelven1">3.Kelven</option>
+            </select><br><br>
+
+            <label for="name12">Enter temperature</label><br><br>
+            <input type="text" id="input1" placeholder="Enter Temperature Here"></input><br><br>
+             <input type="text" id="sub" placeholder="Result" ></input>
+            
+            <br><br><button type="submit" onclick="temp()">submit</button><br><br>
+        </div>
+        <script>
+            function temp() {
+                var temp1=document.getElementById("input1").value;
+                var value1=document.getElementById("value1").value;
+                var value2=document.getElementById("value2").value;
+                if(value1 == value2) {
+                    document.write("<h1> Please Enter Temperatures <h1>")
+                 }
+                if(value1=="Degree Centigrade" && value2=="Faghreen Centigrade1"){
+                    var res1=(temp1*9/5)+32;
+                    sub.value=res1;
+                    
+                }
+                if(value1=="Degree Centigrade" && value2=="Kelven1"){
+                    var res2=(Number(temp1)+273);
+                    sub.value=res2;
+                }
+                if(value1=="Faghreen Centigrade" && value2=="Degree Centigrade1"){
+                    var res3=(temp1-32)*5/9;
+                    sub.value=res3;
+                }
+                if(value1=="Faghreen Centigrade" && value2=="Kelven1"){
+                    var res4=(temp1-32)*5/9+273.15;
+                    sub.value=res4;
+                }
+                if(value1=="Kelven" && value2=="Degree Centigrade1"){
+                    var res5=temp1-273;
+                    sub.value=res5;
+                }
+                if(value1=="Kelven" && value2=="Faghreen Centigrade1"){
+                    var res6=(temp1-273.15)*9/5+32;
+                    sub.value=res6;
+                }
+
+             }
+        </script> 
+
+    </body>
+</html>
